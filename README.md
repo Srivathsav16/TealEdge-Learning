@@ -38,3 +38,24 @@ TealEdge is a modern, full-stack Learning Management System (LMS) designed to fa
 1. Navigate to the backend directory:
    ```bash
    cd backend
+Configure your MySQL database credentials in src/main/resources/application.properties (or application.yml).
+Build and run the Spring Boot application:
+bash
+mvn spring-boot:run
+The backend server will start on http://localhost:8082.
+Frontend Setup
+Navigate to the frontend directory:
+bash
+cd frontend
+Install dependencies:
+bash
+npm install
+Start the Vite development server:
+bash
+npm run dev
+The frontend application will be available at http://localhost:5173 (or the port specified by Vite).
+📚 API Documentation
+Once the backend server is running, you can access the Swagger UI documentation to explore the available API endpoints and their required payloads/responses.
+
+Swagger UI: http://localhost:8082/swagger-ui.html
+OpenAPI JSON: http://localhost:8082/v3/api-docs
