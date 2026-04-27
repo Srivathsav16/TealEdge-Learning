@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//@RestController
-//@RequestMapping("/api/courses")
+@RestController
+@RequestMapping("/api/courses")
 @Tag(name = "Courses", description = "Endpoints for managing courses")
 public class CourseController {
 
