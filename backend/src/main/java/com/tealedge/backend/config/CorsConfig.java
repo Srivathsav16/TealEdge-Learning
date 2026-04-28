@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*") // allow all (for now)
+                        .allowedOrigins("https://teal-edge-learning.vercel.app/") // allow all (for now)
                         .allowedMethods("*")
                         .allowedHeaders("*");
             }
