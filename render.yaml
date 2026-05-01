@@ -1,19 +1,24 @@
+databases:
+  - name: tealedge-db
+    plan: free
+    databaseName: tealedge
+    user: tealedge
+
 services:
   - type: web
     name: tealedge-backend
     runtime: docker
+    plan: free
     rootDir: backend
     healthCheckPath: /api/health
     envVars:
       - key: JWT_SECRET
         generateValue: true
-      - key: SPRING_DATASOURCE_URL
-        sync: false
-      - key: SPRING_DATASOURCE_USERNAME
-        sync: false
-      - key: SPRING_DATASOURCE_PASSWORD
-        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tealedge-db
+          property: connectionString
       - key: GOOGLE_CLIENT_ID
-        sync: false
+        value: 859054408017-vvmqcdn72gm88jjvh7akrqopkp0k5jo1.apps.googleusercontent.com
       - key: APP_CORS_ALLOWED_ORIGINS
-        sync: false
+        value: https://teal-edge-learning.vercel.app
